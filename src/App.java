@@ -44,7 +44,17 @@ public class App {
         libroController.sortByName(books);
         viewConsole.showMessage("OREDENADO");
         viewConsole.printArreglo(books);
-
+        viewConsole.showMessage("ORDENANDO");
+        if(libroController.searchByName(books,"Operating System Concepts")==null){
+            viewConsole.showMessage("No Encontrado");
+        }else{
+            viewConsole.showMessage("ENCONTRADO"+libroController.searchByName(books,"Operating System Concepts"));
+        }
+        if(libroController.searchByName(books,"Operating System Concepts")==null){
+            viewConsole.showMessage("No Encontrado");
+        }else{
+            viewConsole.showMessage("ENCONTRADO"+libroController.searchByName(books,"Python the best book"));
+        }
 
 
     }
